@@ -1,3 +1,8 @@
 hola me llamo Diego, tengo al milaneso 
 otra vez y estudio programacion,
+<<<<<<< HEAD
 checando la rama experimento y seguimos
+=======
+mi commida favorita es el spagetti y me 
+gusta jugar
+>>>>>>> main
