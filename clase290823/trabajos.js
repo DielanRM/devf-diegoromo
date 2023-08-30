@@ -45,7 +45,7 @@ console.log(pila);
 console.log(pila.peek());
 console.log(pila);
 console.log(pila.size());
-*/
+
 
 class Queue{
     constructor(){
@@ -70,7 +70,42 @@ class Queue{
     isEmpty(){
         return this.items.length === 0;
     }
+
+    size(){
+        return this.items.length;
+    }
 }
+
+const cola = new Queue();
+
+console.log(cola.front());
+
+cola.enqueue(7);
+cola.enqueue(24);
+cola.enqueue(11);
+cola.enqueue(313);
+
+console.log(cola);
+
+console.log(cola.dequeue());//7
+console.log(cola.front());//24
+
+console.log(cola);
+console.log(cola.size());
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
