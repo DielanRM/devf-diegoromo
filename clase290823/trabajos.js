@@ -94,7 +94,58 @@ console.log(cola);
 console.log(cola.size());
 */
 
+class Nodo{
+    constructor(valor){
+        this.valor = valor;// datos almacenados en nuestro nodo
+        this.nodoSiguiente = null; //referencia a donde apunta nuestro nodo
+    }
+}
 
+class ListaEnlazada{
+    constructor(){
+        this.cabeza = null; //puntero (apuntamos) al primer elemento
+    }
+
+    append(valor){
+        const nuevoNodo = new Nodo(valor)
+        if (!this.cabeza) {
+            this.cabeza = nuevoNodo; //si la lista esta vacia el nuevo nodo se convierte en el primero
+        }else{
+            let actual = this.cabeza;
+            while(actual.nodoSiguiente){
+                actual = actual.nodoSiguiente;                
+            }
+        actual.nodoSiguiente = nuevoNodo;
+        }
+    }
+    prepend(valor){
+        const nuevoNodo = new Nodo(valor);
+        nuevoNodo.nodoSiguiente = this.cabeza//establecemos el nuevo nodo como el primero
+        this.cabeza = nuevoNodo
+    }
+
+    delete(valor){
+        if (!this.cabeza){
+            return "borre la cabeza";
+        }
+        if(this.cabeza.valor === valor){
+            this.cabeza = this.cabeza.nodoSiguiente;
+            return;
+        }
+        let actual = this.cabeza;
+        while (actual.nodoSiguiente) {
+            if(actual.nodoSiguiente.valor === valor){
+                actual.nodoSiguiente = actual.nodoSiguiente.nodoSiguiente;
+                return;
+            }
+            actual = actual.nodoSiguiente;
+        }
+    }
+
+    display(){
+        let actual = this.cabeza;
+    }
+}
 
 
 
